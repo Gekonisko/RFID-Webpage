@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>2FA</h1>
+<div mat-dialog-content>
+  Put jour rfid card.
+  <br>
+  <br>
+  <div>Code:
+    <ng-container *ngIf="rfidDTO; else Wait">
+     <b> {{rfidDTO.id}} at: {{rfidDTO.at | date : 'hh:mm:ss'}}</b>
+    </ng-container>
+
+   <ng-template #Wait>
+    Waiting for scan...
+   </ng-template>
+  </div>
+
+</div>
+
+
